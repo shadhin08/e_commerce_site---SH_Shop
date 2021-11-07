@@ -5,8 +5,7 @@ import Product from '../Products/Product';
 import Card from '../Card/Card';
 
 const Shop = () => {
-    const result=fakeData;
-    const data=result.slice(0, 10);
+    const data=fakeData;
 
     const [products, setProduct]=useState(data);
     const [card, setCard]=useState([]);

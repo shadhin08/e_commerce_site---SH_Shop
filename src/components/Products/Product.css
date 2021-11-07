@@ -1,0 +1,33 @@
+.product
+{
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    padding: 5px;
+}
+.product-img
+{
+    margin-right: 10px;
+}
+.product-name
+{
+    color: blue;
+    font-weight: 400;
+}
+.product-dec h4, p
+{
+    margin: 5px 0px;
+    /* border: 1px solid red; */
+}
+.button
+{
+    background-color: goldenrod;
+    width: 150px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover
+{
+    background-color: rgb(194, 146, 25);
+}

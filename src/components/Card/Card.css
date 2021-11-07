@@ -1,0 +1,29 @@
+.bill-section
+{
+    display: flex;
+    /* border: 1px solid red; */
+}
+.bill-dec
+{
+    width: 60%;
+    /* border: 1px solid green; */
+}
+.bill{
+    width: 38%;
+    text-align: right;
+    /* border: 1px solid blue; */
+}
+.bill-section h4
+{
+    color: rgb(231, 39, 39);
+}
+.review-card
+{
+    background-color: goldenrod;
+    width: 150px;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.review-card:hover{background-color: rgb(194, 146, 25);}

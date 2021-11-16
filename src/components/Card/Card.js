@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
 const Card = (props) => {
-    // console.log(props.order);
+    // console.log(props);
     const len=props.order.length;
     let productPrice=0;
     let shipping=0;
     for(let i=0;i<len;i++)
     {
-        productPrice=productPrice + props.order[i].price;
+        productPrice=productPrice + props.order[i].price*props.order[i].quantity;
         shipping=shipping+props.order[i].shipping;
     }
     let vat=0;
@@ -28,10 +29,20 @@ const Card = (props) => {
     total=total.toFixed(2);
     total=Number(total);
 
+    let order="";
+    if(props.placeOrder)
+    {
+        order="Place Order";
+    }
+    else if(props.reviewOrder)
+    {
+        order="Review Order"
+    }
+
     return (
         <div>
             <div className='order-summary'>
-                    <h4><bold>Order Summary</bold></h4>
+                    <h4>Order Summary</h4>
                     <p>Items Orderd: {len}</p>
                 </div>
                 <div className='bill-section'>
@@ -47,8 +58,13 @@ const Card = (props) => {
                         <p><small>${vat}</small></p>
                         <h4>${total}</h4>
                     </div>
+                    
                 </div>
-                <button className='review-card'>Review Order</button>
+                <div className='review-button'>
+                <Link to="/order">
+                    <button className='review-card'>{order}</button>
+                </Link>
+                </div>
         </div>
     );
 };

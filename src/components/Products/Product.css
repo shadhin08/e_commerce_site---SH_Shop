@@ -3,6 +3,7 @@
     display: flex;
     border-bottom: 1px solid gainsboro;
     padding: 5px;
+    /* flex-wrap: wrap; */
 }
 .product-img
 {

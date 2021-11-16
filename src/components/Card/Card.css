@@ -26,4 +26,8 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.review-button
+{
+    text-align: center;
+}
 .review-card:hover{background-color: rgb(194, 146, 25);}

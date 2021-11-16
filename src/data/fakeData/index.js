@@ -12,6 +12,7 @@ const shuffle = a => {
     }
 }
 
+
 shuffle(fakeData);
 
 export default fakeData;

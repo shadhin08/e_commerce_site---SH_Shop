@@ -50,7 +50,7 @@ const Review = () => {
                 }
             </div>
             <div className='card-container'>
-                <Card order={cart} placeOrder="true"></Card>
+                <Card order={cart} placeOrder="true"></Card>    
             </div>
         </div>
     );

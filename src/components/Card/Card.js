@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
@@ -32,11 +33,16 @@ const Card = (props) => {
     let order="";
     if(props.placeOrder)
     {
-        order="Place Order";
+        order="Checkout";
     }
     else if(props.reviewOrder)
     {
         order="Review Order"
+    }
+    let history=useHistory();
+    const handleCheckout = () =>
+    {
+        history.push("/shipment");
     }
 
     return (
@@ -61,9 +67,16 @@ const Card = (props) => {
                     
                 </div>
                 <div className='review-button'>
-                <Link to="/order">
-                    <button className='review-card'>{order}</button>
-                </Link>
+                {
+                    props.placeOrder&&
+                    <button onClick={handleCheckout} className='review-card'>{order}</button>
+                }
+                {
+                    props.reviewOrder&&
+                    <Link to="/order">
+                        <button className='review-card'>{order}</button>
+                    </Link>
+                }
                 </div>
         </div>
     );
